@@ -1,8 +1,8 @@
 $(function() {
 	var showCoordinations = true;
 
-	if (window.location.protocol != "http:") {
-	    window.location.href = "http:" + window.location.href.substring(window.location.protocol.length);		
+	if (window.location.protocol != "https:") {
+	    window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
 	}
 
 
@@ -36,20 +36,20 @@ $(function() {
 	// 		$('body').addClass('tour');
 	// 		$('#map').css({position:'relative'});
 	// 		window.isTourMode = true;
-	// 		var x = locations.findWhere({ type: 'Nuclear Waste' }); 
+	// 		var x = locations.findWhere({ type: 'Nuclear Waste' });
 	// 		Vent.trigger('location:clicked', x, true);
 	// 	}
 	// 	else {
-	// 		$('body').removeClass('tour');	
+	// 		$('body').removeClass('tour');
 	// 		$('#map').css({position:'absolute'});
 	// 		window.isTourMode = false;
 	// 	}
 	// });
-	
+
 	var currentMarker;
-	
+
 	var assetsUrl = function() {
-		return window.location.hostname == 'localhost' ? '' : 'http://esx-map.github.io/';
+		return window.location.hostname == 'localhost' ? '' : 'https://esx-map.github.io/';
 	};
 
 	Handlebars.registerHelper('assetsUrl', assetsUrl);
@@ -189,7 +189,7 @@ $(function() {
 			}
 			else {
 				Vent.trigger('locations:invisible', models);
-			}	
+			}
 		},
 
 		showDetails: function(e) {
