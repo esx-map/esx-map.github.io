@@ -256,8 +256,8 @@ $(function() {
 	var MapView = Backbone.View.extend({
 
 		initialize: function() {
-			this.mapType = 'Road';
-			this.mapDetails = { 'Atlas': '#0fa8d2', 'Satellite': '#143d6b', 'Road': '#1862ad' };
+			this.mapType = 'Atlas'; /*'Road';*/
+			this.mapDetails = { 'Road': '#0fa8d2', 'Satellite': '#143d6b', 'Road': '#1862ad' };
 			this.mapOptions = {
 				center: new google.maps.LatLng(66, -125),
 				zoom: 4,
